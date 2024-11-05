@@ -16,7 +16,7 @@
     @include('components.navbar')
     
     {{-- Agar footer selalu menempel di bawah tanpa fixed-bottom sehingga tidak menutupi konten --}}
-    <div class="d-flex flex-wrap" style="align-content: space-between; min-height:95vh">
+    <div class="d-flex flex-wrap align-content-between" style="min-height:98vh">
         @yield('content')
         @include('components.footer')
     </div>

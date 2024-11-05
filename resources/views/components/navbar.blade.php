@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a class="nav-link fw-bold {{request()->routeIs('home')? 'text-decoration-underline text-primary' : ''}}" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle fw-bold {{request()->routeIs('articleByCategory') || request()->routeIs('article')? 'text-decoration-underline text-primary' : ''}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Category
                     </a>
                     <ul class="dropdown-menu">
@@ -21,13 +21,13 @@
                     </ul>
                 </li>
                 <li class="nav-item fw-bold">
-                    <a class="nav-link" href="{{route('writers')}}">Writers</a>
+                    <a class="nav-link {{request()->routeIs('writers') || request()->routeIs('articleByWriter')? 'text-decoration-underline text-primary' : ''}}" href="{{route('writers')}}">Writers</a>
                 </li>
                 <li class="nav-item fw-bold">
-                    <a class="nav-link" href="{{route('about')}}">About Us</a>
+                    <a class="nav-link {{request()->routeIs('about')? 'text-decoration-underline text-primary' : ''}}" href="{{route('about')}}">About Us</a>
                 </li>
                 <li class="nav-item fw-bold">
-                    <a class="nav-link" href="{{route('popular')}}">Popular</a>
+                    <a class="nav-link {{request()->routeIs('popular')? 'text-decoration-underline text-primary' : ''}}" href="{{route('popular')}}">Popular</a>
                 </li>
             </ul>
         </div>

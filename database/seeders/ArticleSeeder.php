@@ -28,8 +28,8 @@ class ArticleSeeder extends Seeder
         //         'writer_id' => $writer->random()->id,
         //     ]);
         // }
-
-        // Untuk default data (Agar bisa diisi photo sesuai dengan yang ada di folder public/assets)
+        
+        // Untuk default data (Agar bisa diisi nama dan photo sesuai dengan yang ada di folder public/assets)
         $articles = [
             // Untuk Artikel category Data Science
             [
@@ -60,13 +60,13 @@ class ArticleSeeder extends Seeder
                 'category' => 'Network Security',
                 'writer_id' => $writer->random()->id,
             ], [
-                'title' => 'Network Security Tools',
+                'title' => 'Popular Network Technology',
                 'photo_name' => 'networking_tools.jpg',
                 'description' => $faker->paragraph,
                 'category' => 'Network Security',
                 'writer_id' => $writer->random()->id,
             ], [
-                'title' => 'Network Security Best Practices',
+                'title' => 'Software Security',
                 'photo_name' => 'networking_best_practice.jpg',
                 'description' => $faker->paragraph,
                 'category' => 'Network Security',

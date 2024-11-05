@@ -11,6 +11,6 @@ Route::get('/about', [PageController::class, 'viewAbout'])->name('about');
 Route::get('/article/{id}', [ArticleController::class, 'viewArticle'])->name('article');
 Route::get('/articles/category/{category}', [ArticleController::class, 'viewArticleByCategory'])->name('articleByCategory');
 Route::get('/articles/writer/{writer}', [ArticleController::class, 'viewArticleByWriter'])->name('articleByWriter');
-Route::get('/writers', [WriterController::class, 'viewWriter'])->name('writers');
+Route::get('/writers', [WriterController::class, 'index'])->name('writers');
 
 Route::get('/popular', [PageController::class, 'viewPopular'])->name('popular');

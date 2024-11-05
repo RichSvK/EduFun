@@ -7,7 +7,7 @@ use App\Models\Writer;
 
 class WriterController extends Controller
 {
-    public function viewWriter(){
+    public function index(){
         $writers = Writer::all();
         return view('writer', ['writers' => $writers]);
     }
